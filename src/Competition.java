@@ -2,9 +2,8 @@ public interface Competition {
 
     void getPitStop();
 
-    void getBestLapTime();
+    int getBestLapTime();
 
-    void getMaxSpeed();
+    int getMaxSpeed();
 
-    String [] driverLis();
 }

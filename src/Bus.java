@@ -1,19 +1,20 @@
-public class Bus extends GeneralCar implements Competition {
-    public int numberOfSeats;
-    public String typeLicenseBus = "C";
+public class Bus extends Transport implements Competition {
 
-    public Bus(String brent, String model, double engineVolume, int numberOfSeats) {
+    public Bus(String brent, String model, double engineVolume) {
         super(brent, model, engineVolume);
-        this.numberOfSeats = numberOfSeats;
     }
 
-    public int getNumberOfSeats() {
-        return numberOfSeats;
+
+    @Override
+    public void startDrive() {
+        System.out.println("Автобус начал движение");
     }
 
-    public void setNumberOfSeats(int numberOfSeats) {
-        this.numberOfSeats = numberOfSeats;
+    @Override
+    public void stopDrive() {
+        System.out.println("Автобус закончил движение");
     }
+
 
     @Override
     public void getPitStop() {
@@ -21,28 +22,30 @@ public class Bus extends GeneralCar implements Competition {
     }
 
     @Override
-    public void getBestLapTime() {
-
+    public int getBestLapTime() {
+        return 0;
     }
 
     @Override
-    public void getMaxSpeed() {
-
+    public int getMaxSpeed() {
+        return 0;
     }
 
-    @Override
-    public String[] driverLis() {
-        return new String[0];
-    }
-
-    @Override
+    /*@Override
     public String toString() {
         return "Bus{" +
-                "numberOfSeats=" + numberOfSeats +
-                ", typeLicenseBus='" + typeLicenseBus + '\'' +
-                ", brent='" + brent + '\'' +
+                "brent='" + brent + '\'' +
                 ", model='" + model + '\'' +
                 ", engineVolume=" + engineVolume +
                 '}';
+    }*/
+
+    public void print (){
+        System.out.println("Название транспорта "+getBrent()+ " "+ "Водитель" );
     }
 }
+
+
+
+
+

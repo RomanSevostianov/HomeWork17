@@ -1,38 +1,37 @@
-public class FreightCar extends GeneralCar implements Competition{
-    public double loadCapacity;
-    public String typeLicenseBus="D";
+public class FreightCar extends Transport implements Competition{
 
-    public FreightCar(String brent, String model, double engineVolume, double loadCapacity) {
+    public FreightCar(String brent, String model, double engineVolume) {
         super(brent, model, engineVolume);
-        this.loadCapacity = loadCapacity;
     }
 
-    public double getLoadCapacity() {
-        return loadCapacity;
+    public void startDrive() {
+        System.out.println("Автобус начал движение");
     }
 
-    public void setLoadCapacity(double loadCapacity) {
-        this.loadCapacity = loadCapacity;
+    public void stopDrive() {
+        System.out.println("Автобус закончил движение");
     }
-
-
     @Override
     public void getPitStop() {
 
     }
 
     @Override
-    public void getBestLapTime() {
-
+    public int getBestLapTime() {
+        return 0;
     }
 
     @Override
-    public void getMaxSpeed() {
-
+    public int getMaxSpeed() {
+        return 0;
     }
 
     @Override
-    public String[] driverLis() {
-        return new String[0];
+    public String toString() {
+        return "FreightCar{" +
+                "brent='" + brent + '\'' +
+                ", model='" + model + '\'' +
+                ", engineVolume=" + engineVolume +
+                '}';
     }
 }

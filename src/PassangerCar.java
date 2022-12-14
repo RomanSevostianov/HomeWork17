@@ -1,40 +1,30 @@
-public class PassangerCar extends GeneralCar implements Competition {
+public class PassangerCar extends Transport implements Competition {
 
-
-    public int numberOfDoors;
-    public String typeLicenseBus="B";
-
-    public PassangerCar(String brent, String model, double engineVolume, int numberOfDoors) {
+    public PassangerCar(String brent, String model, double engineVolume) {
         super(brent, model, engineVolume);
-        this.numberOfDoors = numberOfDoors;
     }
 
-    public int getNumberOfDoors() {
-        return numberOfDoors;
+    public void startDrive() {
+        System.out.println("Автобус начал движение");
     }
 
-    public void setNumberOfDoors(int numberOfDoors) {
-        this.numberOfDoors = numberOfDoors;
+    public void stopDrive() {
+        System.out.println("Автобус закончил движение");
     }
-
 
     @Override
     public void getPitStop() {
-        System.out.println("Пришла на финишь первая");
-    }
-
-    @Override
-    public void getBestLapTime() {
 
     }
 
     @Override
-    public void getMaxSpeed() {
-
+    public int getBestLapTime() {
+        return 0;
     }
 
     @Override
-    public String[] driverLis() {
-        return new String[0];
+    public int getMaxSpeed() {
+        return 0;
     }
 }
+
