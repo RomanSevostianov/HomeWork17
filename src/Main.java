@@ -9,7 +9,7 @@ public class Main {
         BusNumberOne.print();
 
         CategoryC one = new CategoryC("Сергей", 30, BusNumberOne);
-
+        FreightCarOne.printSpec(FreightCar.Carrying.N1.name());
     }
 
 }

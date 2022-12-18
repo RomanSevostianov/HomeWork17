@@ -6,4 +6,5 @@ public interface Competition {
 
     int getMaxSpeed();
 
+    String [] getAllType ();
 }
