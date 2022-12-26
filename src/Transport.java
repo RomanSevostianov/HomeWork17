@@ -10,7 +10,11 @@ public abstract class Transport {
         this.engineVolume = engineVolume;
     }
 
-    public  void startDrive() {
+    public void diagnosed () throws TryExTransport {
+
+    }
+
+    public void startDrive() {
     }
 
     public void stopDrive() {

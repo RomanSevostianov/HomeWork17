@@ -21,6 +21,11 @@ public class PassangerCar extends Transport implements Competition {
     }
 
     @Override
+    public void diagnosed() throws TryExTransport {
+        super.diagnosed();
+    }
+
+    @Override
     public void getPitStop() {
 
     }

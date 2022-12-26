@@ -29,6 +29,10 @@ public class FreightCar extends Transport implements Competition {
 
     private String[] carryingNull = new String[0];
 
+    @Override
+    public void diagnosed() throws TryExTransport {
+        super.diagnosed();
+    }
 
     public FreightCar(String brent, String model, double engineVolume) {
         super(brent, model, engineVolume);

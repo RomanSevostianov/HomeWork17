@@ -34,6 +34,10 @@ public class Bus extends Transport implements Competition {
         super(brent, model, engineVolume);
     }
 
+    @Override
+    public void diagnosed() throws TryExTransport {
+        throw new TryExTransport("Автобус не может проходить диагностику", this);
+    }
 
     @Override
     public void startDrive() {
