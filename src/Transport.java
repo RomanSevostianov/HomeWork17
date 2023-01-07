@@ -31,4 +31,14 @@ public abstract class Transport {
     public double getEngineVolume() {
         return engineVolume;
     }
+
+
+    @Override
+    public String toString() {
+        return "Transport{" +
+                "brent='" + brent + '\'' +
+                ", model='" + model + '\'' +
+                ", engineVolume=" + engineVolume +
+                '}';
+    }
 }
