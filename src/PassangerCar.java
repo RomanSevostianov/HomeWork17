@@ -12,12 +12,14 @@ public class PassangerCar extends Transport implements Competition {
         super(brent, model, engineVolume);
     }
 
+
+
     public void startDrive() {
-        System.out.println("Автобус начал движение");
+        System.out.println("Авто начал движение");
     }
 
     public void stopDrive() {
-        System.out.println("Автобус закончил движение");
+        System.out.println("Авто закончил движение");
     }
 
     @Override

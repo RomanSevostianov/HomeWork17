@@ -1,12 +1,12 @@
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
-public class Mechanic<T extends Transport> {
+public class Mechanic<T extends Transport> { //
 
-    private String name;
-    private String company;
-    private String type;
 
+
+    public String name;
+    public String company;
+    public String type;
 
     public Mechanic(String name, String company, String type) {
         this.name = name;
@@ -55,5 +55,21 @@ public class Mechanic<T extends Transport> {
                 ", type='" + type + '\'' +
                 ", queue=" + queue +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Mechanic)) return false;
+        Mechanic<?> mechanic = (Mechanic<?>) o;
+        return Objects.equals(getName(),
+                mechanic.getName()) && Objects.equals(getCompany(),
+                mechanic.getCompany()) && Objects.equals(getType(),
+                mechanic.getType()) && Objects.equals(queue, mechanic.queue);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getCompany(), getType(), queue);
     }
 }
