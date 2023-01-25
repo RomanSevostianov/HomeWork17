@@ -1,7 +1,8 @@
+import java.util.Set;
+
 public class CategoryB extends Driver <PassangerCar> {
 
-    public CategoryB(String fio, String driverLicense, int experiens, PassangerCar transp) {
-        super(fio, experiens, transp);
+    public CategoryB(Set<String> driverSet, int experiens, PassangerCar transp) {
+        super(driverSet, experiens, transp);
     }
-
 }
